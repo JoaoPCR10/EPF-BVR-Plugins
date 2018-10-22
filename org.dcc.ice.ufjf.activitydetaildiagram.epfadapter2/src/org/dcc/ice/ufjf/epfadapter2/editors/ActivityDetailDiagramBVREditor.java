@@ -51,14 +51,14 @@ public class ActivityDetailDiagramBVREditor extends ActivityDetailDiagramEditor 
 	@Override
 	public void clearHighlighting() {
 		for (Iterator<IFigure> it = foregroundColor.keySet().iterator(); it.hasNext();) {
-			IFigure figure = (IFigure) it.next();
-			figure.setForegroundColor((Color)foregroundColor.get(figure));
+			IFigure figure = it.next();
+			figure.setForegroundColor(foregroundColor.get(figure));
 			figure.repaint();
 			
 		}
 		for (Iterator<IFigure> it = backgroundColor.keySet().iterator(); it.hasNext();) {
-			IFigure figure = (IFigure) it.next();
-			figure.setBackgroundColor((Color)backgroundColor.get(figure));
+			IFigure figure = it.next();
+			figure.setBackgroundColor(backgroundColor.get(figure));
 			figure.repaint();
 			
 		}

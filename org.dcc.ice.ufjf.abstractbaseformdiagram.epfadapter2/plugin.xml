@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="BVR2 Enabled EPF Editor 1"
+            extensions="di"
+            icon="icons/sample.gif"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            class="org.dcc.ice.ufjf.abstractbaseformdiagram.epfadapter2.editors.AbstractBaseFormBVREditor"
+            id="org.dcc.ice.ufjf.abstractbaseformdiagram.epfadapter2.editors.AbstractBaseFormBVREditor">
+      </editor>
+   </extension>
+
+</plugin>

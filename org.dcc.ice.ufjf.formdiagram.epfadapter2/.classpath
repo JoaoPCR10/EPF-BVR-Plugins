@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.authoring.ui_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.base_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.common.service_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.common.ui_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.common.win32.win32.x86_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.dataexchange_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.diagram.ad_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.diagram.add_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.diagram.core_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.diagram.edit_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.diagram.model_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.diagram.ui_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.diagram.wpdd_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.doc_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.export_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.export.xml_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.import_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.import.xml_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.library_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.library.edit_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.library.edit.ui_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.library.persistence_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.library.ui_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.library.ui.xmi_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.library.xmi_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.migration.diagram_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.msproject_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.platform_1.2.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.publishing.ui_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.rcp_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.rcp.ui_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.search_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.search.ui_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.services_1.2.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.ui_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.uma_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.uma.ecore_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.validation_1.5.0.201611202248.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.epf.xml.uma_1.2.0.201611202248.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.dcc.ice.ufjf.activitydetaildiagram.epfadapter"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

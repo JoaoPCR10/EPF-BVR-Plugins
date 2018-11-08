@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: BVR :: Papyrus Diagram EMF Adapter
-Bundle-SymbolicName: no.sintef.bvr.papyrusdiagram.adapter;singleton:=true
+Bundle-Name: BVR :: EPF Diagram Adapter
+Bundle-SymbolicName: org.dcc.ice.ufjf.configdiagram.epfadapter;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: org.dcc.ice.ufjf.epfdiagram.adapter.EPFBVREditorActivator
-Bundle-Vendor: SINTEF
+Bundle-Activator: org.dcc.ice.ufjf.configdiagram.epfadapter.EPFBVREditorActivator
+Bundle-Vendor: DCC-UFJF
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.draw2d,
@@ -63,7 +63,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.epf.xml.uma;bundle-version="1.2.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
-Import-Package: org.eclipse.papyrus.infra.core,
+Import-Package: org.dcc.ice.ufjf.processdiagram.epfadapter2.editors,
+ org.eclipse.papyrus.infra.core,
  org.eclipse.papyrus.infra.core.editor,
  org.eclipse.papyrus.infra.gmfdiag.common,
  org.eclipse.papyrus.infra.gmfdiag.common.editpart

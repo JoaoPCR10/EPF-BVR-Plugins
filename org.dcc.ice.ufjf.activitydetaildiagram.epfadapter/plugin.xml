@@ -4,8 +4,8 @@
    <extension
          point="org.eclipse.core.runtime.adapters">
       <factory
-            adaptableType="org.eclipse.papyrus.editor.PapyrusMultiDiagramEditor"
-            class="org.dcc.ice.ufjf.epfdiagram.adapter.factory.EPFBVREditorFactory">
+            adaptableType="org.eclipse.epf.authoring.ui.editors.ActivityDetailDiagramEditor"
+            class="org.dcc.ice.ufjf.activitydetaildiagram.epfadapter.factory.EPFBVREditorFactory">
          <adapter
                type="no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor">
          </adapter>
@@ -14,7 +14,7 @@
    <extension
          point="org.eclipse.ui.startup">
       <startup
-            class="org.dcc.ice.ufjf.epfdiagram.adapter.EPFBVREditorStartup">
+            class="org.dcc.ice.ufjf.activitydetaildiagram.epfadapter.EPFBVREditorStartup">
       </startup>
    </extension>
 

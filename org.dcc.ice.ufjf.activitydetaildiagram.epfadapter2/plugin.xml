@@ -5,11 +5,11 @@
    <extension
          point="org.eclipse.ui.editors">
       <editor
-            name="BVR2 Enabled Papyrus Editor"
+            name="BVR2 Enabled EPF Editor 2"
             extensions="di"
             icon="icons/sample.gif"
             contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
-            class="org.dcc.ice.ufjf.epfadapter2.editors.ActivityDetailDiagramBVREditor"
+            class="org.dcc.ice.ufjf.activitydetaildiagram.epfadapter2.editors.ActivityDetailDiagramBVREditor"
             id="org.dcc.ice.ufjf.activitydetaildiagram.epfadapter2.editors.ActivityDetailDiagramBVREditor">
       </editor>
    </extension>

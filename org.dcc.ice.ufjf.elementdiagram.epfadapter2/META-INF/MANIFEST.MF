@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: BVR :: Papyrus Diagram Adapter
-Bundle-SymbolicName: no.sintef.bvr.papyrusdiagramadapter2; singleton:=true
+Bundle-Name: BVR :: EPF Diagram Adapter
+Bundle-SymbolicName: org.dcc.ice.ufjf.elementdiagram.epfadapter2;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: org.dcc.ice.ufjf.epfadapter2.Activator
-Bundle-Vendor: SINTEF
+Bundle-Activator: org.dcc.ice.ufjf.elementdiagram.epfadapter2.Activator
+Bundle-Vendor: DCC-UFJF
 Require-Bundle: org.eclipse.draw2d;bundle-version="3.9.0",
  org.eclipse.emf.ecore;bundle-version="2.9.1",
  org.eclipse.gef;bundle-version="3.9.0",
@@ -65,8 +65,8 @@ Require-Bundle: org.eclipse.draw2d;bundle-version="3.9.0",
  org.eclipse.epf.xml.uma;bundle-version="1.2.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
-Export-Package: org.dcc.ice.ufjf.epfadapter2,
- org.dcc.ice.ufjf.epfadapter2.editors,
+Export-Package: org.dcc.ice.ufjf.elementdiagram.epfadapter2,
+ org.dcc.ice.ufjf.elementdiagram.epfadapter2.editors,
  org.eclipse.epf.authoring.gef.commands,
  org.eclipse.epf.authoring.gef.edit,
  org.eclipse.epf.authoring.gef.edit.policies,

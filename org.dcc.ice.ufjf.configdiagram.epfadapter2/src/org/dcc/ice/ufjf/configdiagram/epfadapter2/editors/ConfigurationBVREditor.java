@@ -16,6 +16,7 @@ import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gef.EditPart;
+import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramGraphicalViewer;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramWorkbenchPart;
 import org.eclipse.jface.viewers.ISelection;
@@ -130,15 +131,16 @@ public class ConfigurationBVREditor extends ConfigurationEditor implements IBVRE
 		List<?> editParts = gv.findEditPartsForElement(IDProvider.getXMIId(obj), EditPart.class);
 		
 		for (Object object : editParts) {
-			if(object instanceof IPapyrusEditPart){
-				IPapyrusEditPart ep = (IPapyrusEditPart) object;
+			if(object instanceof ConfigurationEditor){
+				ConfigurationEditor ep = (ConfigurationEditor) object;
 				
-				if (!foregroundColor.containsKey(ep.getPrimaryShape())){
-					foregroundColor.put(ep.getPrimaryShape(), ep.getPrimaryShape().getForegroundColor());
+				if (!foregroundColor.containsKey(((GraphicalEditPart) ep).getFigure())) {
+					//foregroundColor.put(ep.getPrimaryShape(), ep.getPrimaryShape().getForegroundColor());
+					foregroundColor.put(((GraphicalEditPart) ep).getFigure(), ((GraphicalEditPart) ep).getFigure().getForegroundColor());
 				}
-				
-				ep.getPrimaryShape().setForegroundColor(fg);
-				ep.getPrimaryShape().repaint();
+				((GraphicalEditPart) ep).getFigure().setForegroundColor(fg);
+				((GraphicalEditPart) ep).getFigure().repaint();
+	
 			}
 		}
 	}
@@ -155,4 +157,3 @@ public class ConfigurationBVREditor extends ConfigurationEditor implements IBVRE
 		return null;
 	}
 }
-

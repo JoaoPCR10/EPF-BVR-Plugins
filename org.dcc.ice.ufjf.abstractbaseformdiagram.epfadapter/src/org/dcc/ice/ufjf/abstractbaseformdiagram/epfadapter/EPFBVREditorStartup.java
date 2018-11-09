@@ -15,7 +15,7 @@ import org.eclipse.ui.IStartup;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class PapyrusBVREditorStartup.
+ * The Class EPFBVREditorStartup.
  */
 public class EPFBVREditorStartup implements IStartup {
 

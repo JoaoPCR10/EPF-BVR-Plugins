@@ -10,7 +10,7 @@
             icon="icons/sample.gif"
             contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
             class="org.dcc.ice.ufjf.librarydiagram.epfadapter2.editors.LibraryBVREditor"
-            id="org.dcc.ice.ufjf.processdiagram.epfadapter2.editors.LibraryBVREditor">
+            id="org.dcc.ice.ufjf.librarydiagram.epfadapter2.editors.LibraryBVREditor">
       </editor>
    </extension>
 

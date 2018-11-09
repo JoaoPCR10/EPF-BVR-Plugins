@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.core.runtime.adapters">
       <factory
-            adaptableType="org.eclipse.epf.authoring.ui.editors.ProcessEditor"
+            adaptableType="org.eclipse.ui.forms.editor.FormEditor"
             class="org.dcc.ice.ufjf.formdiagram.epfadapter.factory.EPFBVREditorFactory">
          <adapter
                type="no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor">

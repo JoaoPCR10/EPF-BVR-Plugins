@@ -14,26 +14,29 @@ import no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor;
 
 import org.dcc.ice.ufjf.formdiagram.epfadapter.EPFBVREditorAdapter;
 import org.eclipse.core.runtime.IAdapterFactory;
-import org.eclipse.epf.authoring.ui.editors.ProcessEditor;
+//import org.eclipse.epf.authoring.ui.editors.ProcessEditor;
 import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.forms.editor.FormEditor;
+
 
 public class EPFBVREditorFactory implements IAdapterFactory {
 
-	private Map<Object, IBVREnabledEditor> adapterMap = new HashMap<Object, IBVREnabledEditor>();
+	private Map<Object, IBVREnabledEditor> adapterMap = 
+			new HashMap<Object, IBVREnabledEditor>();
 
 	@Override
 	public Object getAdapter(final Object adaptableObject, Class adapterType) {
 
 		if (adapterType == IBVREnabledEditor.class
-				&& adaptableObject instanceof ProcessEditor) {
+				&& adaptableObject instanceof FormEditor) {
 
 			if (adapterMap.containsKey(adaptableObject)) {
 				return adapterMap.get(adaptableObject);
 			}
 
 			// Ensure that adapter is removed in case the editor is closed
-			ProcessEditor editor = (ProcessEditor) adaptableObject;
+			FormEditor editor = (FormEditor) adaptableObject;
 			editor.getSite().getPage().getActiveEditor().getSite().getPage()
 					.addPartListener(new IPartListener() {
 						//final Object adaptableObject_ = adapterMap.get(adaptableObject);

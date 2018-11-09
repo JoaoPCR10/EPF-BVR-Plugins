@@ -5,7 +5,7 @@
    <extension
          point="org.eclipse.ui.editors">
       <editor
-            name="BVR2 Enabled BVR Editor 4"
+            name="Method Element BVR Enabled Editor 4"
             extensions="di"
             icon="icons/sample.gif"
             contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"

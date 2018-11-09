@@ -12,25 +12,22 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor;
+
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.epf.authoring.ui.editors.MethodElementEditor;
 import org.eclipse.gef.EditPart;
+import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramGraphicalViewer;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramWorkbenchPart;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.ui.IEditorPart;
-
-
 //import org.eclipse.papyrus.editor.PapyrusMultiDiagramEditor;
 import org.eclipse.papyrus.infra.gmfdiag.common.editpart.IPapyrusEditPart;
-import org.eclipse.epf.authoring.ui.editors.ActivityDetailDiagramEditor;
-import org.eclipse.epf.authoring.ui.editors.ConfigurationEditor;
-import org.eclipse.epf.authoring.ui.editors.MethodElementEditor;
-
-import no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.ui.IEditorPart;
 
 
 // TODO: Auto-generated Javadoc
@@ -132,15 +129,15 @@ public class MethodElementBVREditor extends MethodElementEditor implements IBVRE
 		List<?> editParts = gv.findEditPartsForElement(IDProvider.getXMIId(obj), EditPart.class);
 		
 		for (Object object : editParts) {
-			if(object instanceof IPapyrusEditPart){
-				IPapyrusEditPart ep = (IPapyrusEditPart) object;
+			if(object instanceof  MethodElementEditor){
+				 MethodElementEditor ep = (MethodElementEditor) object;
 				
-				if (!foregroundColor.containsKey(ep.getPrimaryShape())){
-					foregroundColor.put(ep.getPrimaryShape(), ep.getPrimaryShape().getForegroundColor());
+				if (!foregroundColor.containsKey(((GraphicalEditPart) ep).getFigure())) {
+					//foregroundColor.put(ep.getPrimaryShape(), ep.getPrimaryShape().getForegroundColor());
+					foregroundColor.put(((GraphicalEditPart) ep).getFigure(), ((GraphicalEditPart) ep).getFigure().getForegroundColor());
 				}
-				
-				ep.getPrimaryShape().setForegroundColor(fg);
-				ep.getPrimaryShape().repaint();
+				((GraphicalEditPart) ep).getFigure().setForegroundColor(fg);
+				((GraphicalEditPart) ep).getFigure().repaint();
 			}
 		}
 	}

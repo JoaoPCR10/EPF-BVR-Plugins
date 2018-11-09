@@ -17,7 +17,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "no.sintef.bvr.papyrusdiagramadapter2"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.dcc.ice.ufjf.activitydetaildiagram.epfadapter2"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

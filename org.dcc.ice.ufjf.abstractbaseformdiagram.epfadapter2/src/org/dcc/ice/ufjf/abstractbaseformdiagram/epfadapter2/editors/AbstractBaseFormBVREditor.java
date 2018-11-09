@@ -12,23 +12,21 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor;
+
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.epf.authoring.ui.editors.AbstractBaseFormEditor;
 import org.eclipse.gef.EditPart;
+import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramGraphicalViewer;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramWorkbenchPart;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
+//import org.eclipse.papyrus.editor.PapyrusMultiDiagramEditor;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.ui.IEditorPart;
-
-
-//import org.eclipse.papyrus.editor.PapyrusMultiDiagramEditor;
-import org.eclipse.papyrus.infra.gmfdiag.common.editpart.IPapyrusEditPart;
-import org.eclipse.epf.authoring.ui.editors.AbstractBaseFormEditor;
-
-import no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor;
 
 
 // TODO: Auto-generated Javadoc
@@ -36,7 +34,8 @@ import no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor;
  * The Class PapyrusBVREditor implements IBVREnabledEditor. The plugins adopts standard PapyrusMultiDiagramEditor
  * editor to interact with BVR Tool Bundle.
  */
-public abstract class AbstractBaseFormBVREditor extends AbstractBaseFormEditor implements IBVREnabledEditor {
+public abstract class AbstractBaseFormBVREditor 
+	extends AbstractBaseFormEditor implements IBVREnabledEditor {
 	
 	/** The foreground color. */
 	private Map<IFigure,Color> foregroundColor = new HashMap<IFigure,Color>();
@@ -53,13 +52,11 @@ public abstract class AbstractBaseFormBVREditor extends AbstractBaseFormEditor i
 			IFigure figure = (IFigure) it.next();
 			figure.setForegroundColor((Color)foregroundColor.get(figure));
 			figure.repaint();
-			
 		}
 		for (Iterator<IFigure> it = backgroundColor.keySet().iterator(); it.hasNext();) {
 			IFigure figure = (IFigure) it.next();
 			figure.setBackgroundColor((Color)backgroundColor.get(figure));
 			figure.repaint();
-			
 		}
 		foregroundColor.clear();
 		backgroundColor.clear();
@@ -130,15 +127,15 @@ public abstract class AbstractBaseFormBVREditor extends AbstractBaseFormEditor i
 		List<?> editParts = gv.findEditPartsForElement(IDProvider.getXMIId(obj), EditPart.class);
 		
 		for (Object object : editParts) {
-			if(object instanceof IPapyrusEditPart){
-				IPapyrusEditPart ep = (IPapyrusEditPart) object;
-				
-				if (!foregroundColor.containsKey(ep.getPrimaryShape())){
-					foregroundColor.put(ep.getPrimaryShape(), ep.getPrimaryShape().getForegroundColor());
+			if(object instanceof AbstractBaseFormEditor){
+				AbstractBaseFormEditor ep = (AbstractBaseFormEditor) object;			
+		
+				if (!foregroundColor.containsKey(((GraphicalEditPart) ep).getFigure())) {
+					//foregroundColor.put(ep.getPrimaryShape(), ep.getPrimaryShape().getForegroundColor());
+					foregroundColor.put(((GraphicalEditPart) ep).getFigure(), ((GraphicalEditPart) ep).getFigure().getForegroundColor());
 				}
-				
-				ep.getPrimaryShape().setForegroundColor(fg);
-				ep.getPrimaryShape().repaint();
+				((GraphicalEditPart) ep).getFigure().setForegroundColor(fg);
+				((GraphicalEditPart) ep).getFigure().repaint();				
 			}
 		}
 	}
@@ -155,4 +152,3 @@ public abstract class AbstractBaseFormBVREditor extends AbstractBaseFormEditor i
 		return null;
 	}
 }
-

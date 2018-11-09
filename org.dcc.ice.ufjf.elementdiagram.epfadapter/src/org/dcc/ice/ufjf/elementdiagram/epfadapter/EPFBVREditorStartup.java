@@ -20,7 +20,8 @@ import org.eclipse.ui.IStartup;
 public class EPFBVREditorStartup implements IStartup {
 
 	/** The Constant PLUGIN_ID. */
-	public static final String PLUGIN_ID = EPFBVREditorActivator.class.getPackage().getName();
+	public static final String PLUGIN_ID = 
+			EPFBVREditorActivator.class.getPackage().getName();
 
 	/** The logger. */
 	private ILog logger = Platform.getLog(Platform.getBundle(PLUGIN_ID));

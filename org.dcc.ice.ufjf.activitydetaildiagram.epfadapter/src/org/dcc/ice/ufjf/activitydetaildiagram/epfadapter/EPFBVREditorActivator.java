@@ -16,7 +16,7 @@ import org.osgi.framework.BundleContext;
 public class EPFBVREditorActivator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "no.sintef.bvr.papyrusdiagram.adapter"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.dcc.ice.ufjf.activitydetaildiagram.epfadapter"; //$NON-NLS-1$
 
 	// The shared instance
 	private static EPFBVREditorActivator plugin;

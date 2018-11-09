@@ -205,7 +205,7 @@ public class EPFBVREditorAdapter extends AbstractBVREnabledEditor {
 		IEditorPart part = editor.getSite().getPage().getActiveEditor();
 		IDiagramGraphicalViewer gv = ((IDiagramWorkbenchPart) part).getDiagramGraphicalViewer();
 
-		HashSet<Object> grapthicalParts = new HashSet<Object>();
+		HashSet<Object> graphicalParts = new HashSet<Object>();
 
 		for (EObject eObject : objects) {
 			List<?> editParts = gv.findEditPartsForElement(IDProvider.getXMIId(eObject), EditPart.class);
@@ -213,11 +213,11 @@ public class EPFBVREditorAdapter extends AbstractBVREnabledEditor {
 				if(diagramPart instanceof ActivityDetailDiagramEditPart){
 				//if (diagramPart instanceof IGraphicalEditPart) {
 					System.out.println(diagramPart);
-					grapthicalParts.add(diagramPart);
+					graphicalParts.add(diagramPart);
 				}
 			}
 		}
 
-		return new ArrayList<Object>(grapthicalParts);
+		return new ArrayList<Object>(graphicalParts);
 	}
 }

@@ -20,7 +20,8 @@ import org.eclipse.ui.IWorkbenchPart;
 
 public class EPFBVREditorFactory implements IAdapterFactory {
 
-	private Map<Object, IBVREnabledEditor> adapterMap = new HashMap<Object, IBVREnabledEditor>();
+	private Map<Object, IBVREnabledEditor> adapterMap =
+			new HashMap<Object, IBVREnabledEditor>();
 
 	@Override
 	public Object getAdapter(final Object adaptableObject, Class adapterType) {
@@ -80,5 +81,4 @@ public class EPFBVREditorFactory implements IAdapterFactory {
 	public Class[] getAdapterList() {
 		return new Class[] { IBVREnabledEditor.class };
 	}
-
 }

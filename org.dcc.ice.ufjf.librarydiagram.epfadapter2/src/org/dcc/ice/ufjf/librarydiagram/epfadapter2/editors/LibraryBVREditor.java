@@ -23,10 +23,6 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.ui.IEditorPart;
-
-
-//import org.eclipse.papyrus.editor.PapyrusMultiDiagramEditor;
-import org.eclipse.papyrus.infra.gmfdiag.common.editpart.IPapyrusEditPart;
 import org.eclipse.epf.authoring.ui.editors.MethodLibraryEditor;
 
 import no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor;
@@ -69,6 +65,7 @@ public class LibraryBVREditor extends MethodLibraryEditor implements IBVREnabled
 	/* (non-Javadoc)
 	 * @see no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor#getSelectedObjects()
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Object> getSelectedObjects() {
 		ISelection selection = getSite().getSelectionProvider().getSelection();

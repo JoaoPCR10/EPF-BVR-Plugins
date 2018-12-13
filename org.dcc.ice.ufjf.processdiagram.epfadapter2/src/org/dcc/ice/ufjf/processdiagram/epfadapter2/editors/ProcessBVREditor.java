@@ -24,9 +24,6 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.ui.IEditorPart;
 
-
-//import org.eclipse.papyrus.editor.PapyrusMultiDiagramEditor;
-import org.eclipse.papyrus.infra.gmfdiag.common.editpart.IPapyrusEditPart;
 import org.eclipse.epf.authoring.ui.editors.ProcessEditor;
 
 import no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor;
@@ -34,7 +31,7 @@ import no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class PapyrusBVREditor implements IBVREnabledEditor. The plugins adopts standard PapyrusMultiDiagramEditor
+ * The Class EPFBVREditor implements IBVREnabledEditor. The plugins adopts standard PapyrusMultiDiagramEditor
  * editor to interact with BVR Tool Bundle.
  */
 public class ProcessBVREditor extends ProcessEditor implements IBVREnabledEditor {

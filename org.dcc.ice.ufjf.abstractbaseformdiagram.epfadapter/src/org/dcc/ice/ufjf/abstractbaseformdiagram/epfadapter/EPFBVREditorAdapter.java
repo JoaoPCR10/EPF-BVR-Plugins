@@ -85,6 +85,7 @@ public class EPFBVREditorAdapter extends AbstractBVREnabledEditor {
 	 * @see no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor#
 	 * getSelectedObjects()
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Object> getSelectedObjects() {
 		ISelection selection = editor.getSite().getSelectionProvider().getSelection();

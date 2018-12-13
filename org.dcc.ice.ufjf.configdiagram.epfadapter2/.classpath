@@ -42,6 +42,6 @@
 	<classpathentry kind="lib" path="libs/org.eclipse.epf.uma.ecore_1.5.0.201611202248.jar"/>
 	<classpathentry kind="lib" path="libs/org.eclipse.epf.validation_1.5.0.201611202248.jar"/>
 	<classpathentry kind="lib" path="libs/org.eclipse.epf.xml.uma_1.2.0.201611202248.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.dcc.ice.ufjf.activitydetaildiagram.epfadapter"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.dcc.ice.ufjf.configdiagram.epfadapter"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

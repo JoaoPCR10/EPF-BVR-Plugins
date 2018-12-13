@@ -65,6 +65,7 @@ public abstract class AbstractBaseFormBVREditor
 	/* (non-Javadoc)
 	 * @see no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor#getSelectedObjects()
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Object> getSelectedObjects() {
 		ISelection selection = getSite().getSelectionProvider().getSelection();

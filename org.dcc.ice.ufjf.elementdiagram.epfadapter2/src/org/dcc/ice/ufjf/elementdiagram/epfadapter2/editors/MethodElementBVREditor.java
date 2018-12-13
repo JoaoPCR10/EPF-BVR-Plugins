@@ -24,8 +24,6 @@ import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramGraphicalViewer;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramWorkbenchPart;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
-//import org.eclipse.papyrus.editor.PapyrusMultiDiagramEditor;
-import org.eclipse.papyrus.infra.gmfdiag.common.editpart.IPapyrusEditPart;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.ui.IEditorPart;
 
@@ -67,6 +65,7 @@ public class MethodElementBVREditor extends MethodElementEditor implements IBVRE
 	/* (non-Javadoc)
 	 * @see no.sintef.bvr.thirdparty.interfaces.editor.IBVREnabledEditor#getSelectedObjects()
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Object> getSelectedObjects() {
 		ISelection selection = getSite().getSelectionProvider().getSelection();
